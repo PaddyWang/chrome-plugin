@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>压缩图片</title>
+    <meta name="google" value="notranslate" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4d4f50;
+            padding: 20px;
+        }
+        header > input[type=range] {
+            width: 300px;
+        }
+        button {
+            padding: 8px 12px;
+            border-radius: 6px;
+            outline: none;
+            background-color: #fff;
+            border: 1px solid #b5b5b5;
+            cursor: pointer;
+        }
+        button:hover {
+            color: #fff;
+            border-color: #2196F3;
+            background-color: #2196F3;
+        }
+        .m-l-20 {
+            margin-left: 20px;
+        }
+        .center {
+            text-align: center;
+        }
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+        .clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .item {
+            float: left;
+            margin: 12px;
+            border: 1px solid #999;
+        }
+        .item > div {
+            float: left;
+        }
+        .item > div > div {
+            width: 200px;
+            height: 300px;
+            vertical-align: middle;
+            text-align: center;
+            display: table-cell;
+            background-color: #eaeaea;
+        }
+        .item > div > div > img,
+        #img-preview-modal > div > img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .item > div > p {
+            text-align: center;
+            margin-top: 8px;
+        }
+        .font-white {
+            color: #fff;
+        }
+        #img-preview-modal {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        #img-preview-modal > div {
+            width: 800px;
+            height: 500px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -250px;
+            margin-left: -400px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <input type="file" accept=".png,.jpg,.jpeg,.gif" id="file" multiple>
+        <span class="font-white">批量压缩比例：</span>
+        <input type="range" step="1" max="100" min="0" value="100" id="input-quality">
+        <button class="m-l-20" id="download-all">下载全部</button>
+        <button class="m-l-20" id="clear-all">清空全部</button>
+        <button class="m-l-20" id="openfile">打开文件</button>
+    </header>
+    <div id="images">
+        <div class="item" style="display: none;">
+            <div>
+                <div>
+                    <img id="img">
+                </div>
+                <p>Size: 1234KB</p>
+            </div>
+            <div>
+                <input type="range" step="1" max="100" min="0" value="100">
+                <p>下载</p>
+            </div>
+            <div>
+                <div>
+                    <img>
+                </div>
+                <p>Size: 1234KB</p>
+            </div>
+        </div>
+    </div>
+    <div id="img-preview-modal">
+        <div>
+            <!-- <img id="img-preview"> -->
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>便签</title>
+    <link rel="stylesheet" href="css/style.css">
+    <base target="_black">
+</head>
+<body>
+    <header>
+        <div id="time">
+            <span>0000 -00 -00</span> <span>00:00</span> .<i>00</i>
+        </div>
+        <div class="signature">美好的一天从打开 Tab 开始</div>
+        <a class="help right" href="README.html">?</a>
+    </header>
+    <section class="content">
+        <div class="menu">
+            <h3 class="to-r add-memo" click="memo-modal" id="notesBtn">即将开始<p>点击添加</p></h3>
+            <h3 class="to-r add-memo" click="memo-modal">备忘列表<p>点击添加</p></h3>
+            <h3 id="show-g-link">链接备忘<p>回收站</p></h3>
+        </div>
+        <div class="link-contant">
+            <header click="link-modal" id="add-link-btn">+</header>
+            <article class="link" id="link">
+                <a id="none-link">暂时没有数据哦～</a>
+            </article>
+        </div>
+        <div id="g-link-contant">
+            <header>×<div id="clear-g-link">清空回收站</div></header>
+            <article class="link" id="g-link"></article>
+        </div>
+
+        <div id="time-line">
+            <canvas width="800" height="50"></canvas>
+        </div>
+        <div id="memo">
+            <div id="wait" class="wait">
+                <h3>下午有个会议</h3>
+                <i>2016-12-11 13:40</i>
+                <p>倒计时：<span>30分钟</span></p>
+                <div>
+                    数据库的风扇接口方式打开经典福克斯的jfk拉萨的速度就放声大哭警方联手的
+                    数据库的风扇接口方式打开经典福克斯的jfk拉萨的速度就放声大哭警方联手的
+                    数据库的风扇接口方式打开经典福克斯的jfk拉萨的速度就放声大哭警方联手的
+                    数据库的风扇接口方式打开经典福克斯的jfk拉萨的速度就放声大哭警方联手的
+                    数据库的风扇接口方式打开经典福克斯的jfk拉萨的速度就放声大哭警方联手的
+                    数据库的风扇接口方式打开经典福克斯的jfk拉萨的速度就放声大哭警方联手的
+                    数据库的风扇接口方式打开经典福克斯的jfk拉萨的速度就放声大哭警方联手的
+                    数据库的风扇接口方式打开经典福克斯的jfk拉萨的速度就放声大哭警方联手的
+                    数据库的风扇接口方式打开经典福克斯的jfk拉萨的速度就放声大哭警方联手的
+                    数据库的风扇接口方式打开经典福克斯的jfk拉萨的速度就放声大哭警方联手的
+                </div>
+            </div>
+            <div id="memo-list">
+                <ul>
+                    <li>
+                        <span>2016-12-11 13:40</span>
+                        <span>下午有个会议下午有个会议下午有个会议</span>
+                        <span>数据库的风扇接口方式打开经数据库的风扇接口方式打开经数据库的风扇接口方式打开经</span>
+                    </li>
+                    <li>
+                        <span>2016-12-11 13:40</span>
+                        <span>下午有个会议</span>
+                        <span>数据库的风扇接口方式打开经</span>
+                    </li>
+                    <li>
+                        <span>2016-12-11 13:40</span>
+                        <span>下午有个会议</span>
+                        <span>数据库的风扇接口方式打开经</span>
+                    </li>
+                    <li>
+                        <span>2016-12-11 13:40</span>
+                        <span>下午有个会议</span>
+                        <span>数据库的风扇接口方式打开经</span>
+                    </li>
+                    <li>
+                        <span>2016-12-11 13:40</span>
+                        <span>下午有个会议</span>
+                        <span>数据库的风扇接口方式打开经</span>
+                    </li>
+                    <li>
+                        <span>2016-12-11 13:40</span>
+                        <span>下午有个会议</span>
+                        <span>数据库的风扇接口方式打开经</span>
+                    </li>
+                    <li>
+                        <span>2016-12-11 13:40</span>
+                        <span>下午有个会议</span>
+                        <span>数据库的风扇接口方式打开经</span>
+                    </li>
+                    <li>
+                        <span>2016-12-11 13:40</span>
+                        <span>下午有个会议</span>
+                        <span>数据库的风扇接口方式打开经</span>
+                    </li>
+                    <li>
+                        <span>2016-12-11 13:40</span>
+                        <span>下午有个会议</span>
+                        <span>数据库的风扇接口方式打开经</span>
+                    </li>
+                    <li>
+                        <span>2016-12-11 13:40</span>
+                        <span>下午有个会议</span>
+                        <span>数据库的风扇接口方式打开经</span>
+                    </li>
+                    <li>
+                        <span>2016-12-11 13:40</span>
+                        <span>下午有个会议</span>
+                        <span>数据库的风扇接口方式打开经</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div id="link-modal">
+        <section>
+            <h3>添加链接</h3>
+            <i class="close">×</i>
+            <form id="link-modal-form">
+                <div class="line">
+                    <label for="title">链接名称：</label>
+                    <input type="text" id="title">
+                </div>
+                <div class="line">
+                    <label for="url">链接地址：</label>
+                    <textarea id="url"></textarea>
+                </div>
+                <div class="line">
+                    <label for="color">颜色：</label>
+                    <input type="color" id="color" value="#555555">
+                </div>
+                <div class="buttons">
+                    <button class="cancel">取消</button>
+                    <button class="ok right">添加</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <div id="memo-modal">
+        <section>
+            <h3>添加备忘</h3>
+            <i class="close">×</i>
+            <form id="memo-modal-form">
+                <div class="line">
+                    <label for="memo-title">备忘标题：</label>
+                    <input type="text" id="memo-title" placeholder="e.g: 下午有个约会">
+                </div>
+                <div class="line">
+                    <label for="memo-time">提醒时间：</label>
+                    <input type="text" id="memo-time" placeholder="e.g: 2017-01-01 12:30" maxlength="16">
+                    <i>?
+                        <span>
+                            大于当前时间<br>
+                            完整的年（四位数字）<br>
+                            完整的月、日（两位，不足两位前面补 0）<br>
+                            年、月、日中间以英文状态下的中划线 '-'
+                        </span>
+                    </i>
+                </div>
+                <div class="line">
+                    <label for="memo-content">备忘内容：</label>
+                    <textarea id="memo-content"></textarea>
+                </div>
+                <div class="buttons">
+                    <button class="cancel">取消</button>
+                    <button class="ok right">添加</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <menu id="link-menu">
+        <div type="update">修改链接</div>
+        <div type="delete">删除链接</div>
+        <div type="copy">复制链接</div>
+        <div type="open-new-tab">新标签页打开链接</div>
+    </menu>
+    <menu id="g-link-menu">
+        <div type="restore">还原链接</div>
+        <div type="delete">永久删除</div>
+        <div type="copy">复制链接</div>
+        <div type="clear">清空回收站</div>
+        <div type="open-new-tab">新标签页打开链接</div>
+    </menu>
+    <script type="text/javascript" src="js/store.js"></script>
+    <script type="text/javascript" src="js/form.js"></script>
+    <script type="text/javascript" src="js/active.js"></script>
+    <script type="text/javascript" src="js/menu.module.js"></script>
+    <script type="text/javascript" src="js/link.module.js"></script>
+    <script type="text/javascript" src="js/memo.module.js"></script>
+    <script type="text/javascript" src="js/time.module.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

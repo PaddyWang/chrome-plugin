@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>备忘录列表</title>
+    <style>
+        body.list {
+            width: 380px;
+            height: 480px;
+            margin: 8px;
+        }
+        body > section {
+            min-width: 0 !important;
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="list">
+    <section>
+        <header class="tabs clearfix">
+            <div for="wait" class="active">待办</div>
+            <div for="link">链接</div>
+        </header>
+        <article>
+            <div id="wait" class="active wait">
+                <h3>下午有个会议</h3>
+                <i>2016-12-11 13:40</i>
+                <div>
+                    数据库的风扇接口方式打开经典福克斯的jfk拉萨的速度就放声大哭警方联手的
+                </div>
+            </div>
+            <div id="link" class="link">
+                <a id="none-link">暂时没有数据哦～</a>
+            </div>
+        </article>
+    </section>
+    <script type="text/javascript" src="js/events.js"></script>
+    <script type="text/javascript" src="js/store.js"></script>
+    <script type="text/javascript" src="js/list.js"></script>
+</body>
+</html>

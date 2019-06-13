@@ -1,0 +1,42 @@
+{
+    "name": "截图插件",
+    "version": "2.0",
+    "description": "截取当前浏览页面",
+    "manifest_version": 2,
+    "permissions": [
+        "tabs",
+        "*://*/",
+        "activeTab",
+        "storage",
+        "contextMenus"
+    ],
+    "background": {
+        "persistent": false,
+        "scripts": ["js/background.js", "config.js"]
+    },
+    "content_scripts": [
+        {
+            "matches" : ["*://*/*"],
+            "js": ["js/content.js"]
+        }
+    ],
+    "icons": {
+        "16": "icons/icon_16x16.png",
+        "32": "icons/icon_32x32.png",
+        "48": "icons/icon_48x48.png",
+        "64": "icons/icon_64x64.png",
+        "128": "icons/icon_128x128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "icons/icon_16x16.png",
+            "32": "icons/icon_32x32.png",
+            "48": "icons/icon_48x48.png",
+            "64": "icons/icon_64x64.png",
+            "128": "icons/icon_128x128.png"
+        },
+        "default_title": "点击截屏"
+    },
+    "homepage_url": "http://paddywang.github.io/",
+    "options_page": "page/settings.html"
+}

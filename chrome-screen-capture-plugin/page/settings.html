@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>截图设置</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #f8f9fa;
+            font-size: 14px;
+        }
+        .w {
+            width: 680px;
+            margin: 0 auto;
+        }
+        header {
+            padding: 8px 0;
+            color: #fff;
+            font-size: 16px;
+            background-color: #4c93df;
+        }
+        .card > label {
+            display: block;
+            font-size: 14px;
+            color: #999;
+            padding: 16px 0 8px;
+        }
+        ul li {
+            list-style: none;
+        }
+        .card-content {
+            border-radius: 6px;
+            background-color: #fff;
+            box-shadow: 1px 2px 8px 0px #b1b1b1;
+        }
+        .card-content > li,
+        .card-item {
+            padding: 8px 12px;
+            border-bottom: 1px solid #e2e2e2;
+        }
+        .card-content > li,
+        .card-item,
+        .content-center {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-content > li.none {
+            padding: 0;
+        }
+        .card-content > li.none > div {
+            width: 100%;
+        }
+        .card-content > li:last-child,
+        .card-item:last-child {
+            border-bottom: none;
+        }
+        .card-content > li > label > span,
+        .card-item > label > span {
+            font-size: 12px;
+            color: #b3b3b3;
+            margin-left: 8px;
+        }
+        input[type=text] {
+            width: 200px;
+            padding: 6px 12px;
+            border: 1px solid #999;
+            outline: none;
+            border-radius: 4px;
+        }
+        input:hover,
+        input:focus {
+            border-color: #4c93df;
+        }
+        button {
+            border: 1px solid #00ffdc;
+            padding: 6px 12px;
+            border-radius: 4px;
+            outline: none;
+            color: #00ffdc;
+            background-color: transparent;
+        }
+        button:hover {
+            background-color: #00ffdc69;
+            color: #fff;
+        }
+        button.grey {
+            border-color: #dafbff;
+            color: #dafbff;
+        }
+        button.grey:hover {
+            background-color: #ffffff5e;
+            color: #00ffdc;
+        }
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+        .pointer,
+        button {
+            cursor: pointer;
+        }
+        .p-8-12 {
+            padding: 8px 12px;
+        }
+        .m-l-12 {
+            margin-left: 12px;
+        }
+        .watermark-content {
+            display: none;
+        }
+        #watermark-box.active .card-item {
+            border: none;
+        }
+        #watermark-box.active .watermark-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="w content-center">
+            <div>设置截图插件</div>
+            <div>
+                <button class="grey" id="close-btn">关闭</button>
+                <button class="m-l-12" id="save-btn">保存</button>
+            </div>
+        </div>
+    </header>
+    <section class="w">
+        <div class="card">
+            <label for="">基础设置</label>
+            <ul class="card-content">
+                <li>
+                    <label>下载截图文件名</label>
+                    <input type="text" id="screen-capture-fill-name">
+                </li>
+                <li class="none">
+                    <div id="watermark-box">
+                        <div class="card-item">
+                            <label class="pointer" for="watermark">是否添加水印<span>默认添加当前网址</span></label>
+                            <input type="checkbox" id="watermark">
+                        </div>
+                        <div class="m-l-12 watermark-content">
+                            <div class="p-8-12">
+                                <input type="radio" name="watermark" id="watermark-current">
+                                <label class="m-l-12 pointer" for="watermark-current">当前网址</label>
+                            </div>
+                            <div class="p-8-12">
+                                <input type="radio" name="watermark" id="watermark-custom">
+                                <input class="m-l-12" type="text" placeholder="自定义水印" id="watermark-custom-text">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <script src="../config.js"></script>
+    <script src="../js/settings.js"></script>
+</body>
+</html>
